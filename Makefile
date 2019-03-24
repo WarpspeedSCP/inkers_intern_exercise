@@ -13,3 +13,4 @@ mimels: main.o lib
 clean:
 	rm -rf *.o
 	rm mimels
+	rm *.a
