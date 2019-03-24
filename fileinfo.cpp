@@ -217,6 +217,7 @@ std::ostream &operator << (std::ostream &out, const statList &fi)
 {
     int name_l = 0, size_l = 0, uid_l = 0, gid_l = 0, time_l = 0, mime_l = 0, link_l = 0;
 
+    // Get the maximum width of each column and normalise the output width to the highest values.
     for(const auto &i : fi) {
         link_l = [&i, &link_l]()->int
         {
