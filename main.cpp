@@ -7,7 +7,7 @@ int main(int argc, char **argv)
     if (argc == 1)
     {
         fileinfo::lib f;
-        fileinfo::statList f1 = f.get_sorted_path_info(".", fileinfo::sortMode::DEFAULT);
+        fileinfo::statList f1 = f.get_path_info(".");
 
         std::cout << f1;
         return 0;
