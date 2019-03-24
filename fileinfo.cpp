@@ -227,15 +227,15 @@ std::ostream &operator << (std::ostream &out, const statList &fi)
         }();
         size_l = [&i, &size_l]()->int
         {
-                std::stringstream s;
-                s << i.size;
-                auto len = s.str().length();
-                return len > size_l ? len : size_l;
+            std::stringstream s;
+            s << i.size;
+            auto len = s.str().length();
+            return len > size_l ? len : size_l;
         }();
         time_l = [&i, &time_l]()->int
         {
-                std::string s = get_time_as_string(i.atim.tv_sec);
-                return s.length() > time_l ? s.length() : time_l;
+            std::string s = get_time_as_string(i.atim.tv_sec);
+            return s.length() > time_l ? s.length() : time_l;
         }();
         if(i.name.length() > name_l) name_l = i.name.length();
         if(i.mime_type.length() > mime_l) mime_l = i.mime_type.length();

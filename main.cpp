@@ -7,6 +7,7 @@ int main(int argc, char **argv)
     if (argc == 1)
     {
         fileinfo::lib f;
+        // Example of directly getting info with get_path_info.
         fileinfo::statList f1 = f.get_path_info(".");
 
         std::cout << f1;
@@ -46,6 +47,7 @@ options:\n\
         input = ".";
 
     fileinfo::lib f;
+    // Example of using get_sorted_path_info
     fileinfo::statList f1 = f.get_sorted_path_info(input, (fileinfo::sortMode)mode);
 
     std::cout << f1;
